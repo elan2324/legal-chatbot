@@ -4,29 +4,17 @@ import re
 import sqlite3
 from functools import wraps
 from pathlib import Path
-
+from config.settings import Config
+from database.db import get_db_connection, init_db
 import random_responses
-from dotenv import load_dotenv
+
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 
-# -----------------------------
-# Paths & Environment
-# -----------------------------
-BASE_DIR = Path(__file__).resolve().parent
-load_dotenv(BASE_DIR / ".env")
-
-DATABASE_PATH = BASE_DIR / "signup.db"
-BOT_DATA_PATH = BASE_DIR / "bot.json"
 
 app = Flask(__name__)
 
-app.config.update(
-    SECRET_KEY=os.getenv("SECRET_KEY"),
-    SESSION_COOKIE_HTTPONLY=True,
-    SESSION_COOKIE_SAMESITE="Lax",
-    SESSION_COOKIE_SECURE=os.getenv("FLASK_ENV", "development") == "production",
-)
+app.config.from_object(Config)
 
 if not app.config["SECRET_KEY"]:
     raise RuntimeError(
@@ -47,31 +35,7 @@ def add_no_cache_headers(response):
     response.headers["Expires"] = "0"
     return response
 
-# -----------------------------
-# Database
-# -----------------------------
-def get_db_connection():
-    conn = sqlite3.connect(DATABASE_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
 
-
-def init_db():
-    with get_db_connection() as conn:
-        conn.execute(
-            """
-            CREATE TABLE IF NOT EXISTS info (
-                user TEXT PRIMARY KEY,
-                email TEXT NOT NULL UNIQUE,
-                password TEXT NOT NULL,
-                mobile TEXT,
-                name TEXT NOT NULL,
-                role TEXT NOT NULL DEFAULT 'user'
-                    CHECK(role IN ('user','admin'))
-            )
-            """
-        )
-        conn.commit()
 
 # -----------------------------
 # Chatbot Data
@@ -82,7 +46,7 @@ def load_json(path: Path):
         return json.load(f)
 
 
-response_data = load_json(BOT_DATA_PATH)
+response_data = load_json(Config.BOT_DATA_PATH)
 
 # -----------------------------
 # Authentication Decorator
