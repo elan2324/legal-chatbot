@@ -1,0 +1,167 @@
+[
+  {
+    "response_type": "greeting",
+    "user_input": ["hello", "hi", "hey"],
+    "bot_response": "Hey there!",
+    "required_words": []
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["see you", "goodbye", "bye"],
+    "bot_response": "See you later!",
+    "required_words": []
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["nice", "to", "meet", "you"],
+    "bot_response": "The pleasure is all mine!",
+    "required_words": ["nice", "meet", "you"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["what", "your", "rights", "police", "stop", "questioning"],
+    "bot_response": "You have the right to remain silent, the right to know the reason for being stopped, and the right to speak to a lawyer. You do not need to go to the police station unless you are formally arrested or served a legal notice.",
+    "required_words": ["rights", "stop", "questioning"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["How", "file", "FIR", "police", "station"],
+    "bot_response": "Visit the nearest police station and explain the incident. The police must register your FIR if it involves a cognizable offence. You have the right to receive a copy of the FIR free of cost.",
+    "required_words": ["file", "FIR"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["how", "are", "you"],
+    "bot_response": "I'm great! Thanks for asking.",
+    "required_words": ["how", "are", "you"]
+  },
+  {
+    "response_type": "question",
+    "user_input": [
+      "fundamental",
+      "rights",
+      "provided",
+      "by",
+      "Indian",
+      "Constitution"
+    ],
+    "bot_response": "The Constitution guarantees rights like the Right to Equality, Right to Freedom, Right to Protection of Life and Personal Liberty, Right to Education, and Right against Exploitation.",
+    "required_words": ["fundamental", "rights"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["steps", "take", "case", "cybercrime", "online", "fraud"],
+    "bot_response": "Report immediately at cybercrime.gov.in or the local cybercrime cell. Provide evidence like screenshots or bank records. You can also call the helpline 1930.",
+    "required_words": ["steps", "take", "case", "cybercrime"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["procedure", "marriage", "legally", "registered"],
+    "bot_response": "Apply at the local marriage registrar's office with ID/address proof, photos, and witnesses. For special cases (inter-religion, NRI), apply under the Special Marriage Act.",
+    "required_words": ["procedure", "marriage", "registered"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["process", "complaint", "consumer", "court"],
+    "bot_response": "First, send a legal notice to the seller/company. If there's no response, file a complaint at the District/State/National Consumer Forum with relevant documents and receipts.",
+    "required_words": ["process", "complaint", "consumer", "court"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["How", "write", "register", "will", "India"],
+    "bot_response": "A will should be written clearly, signed by the person making it, and attested by two witnesses. Though not mandatory, registration at the sub-registrar’s office makes it legally stronger.",
+    "required_words": ["How", "write", "register", "will", "India"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["role", "Lok", "Adalats", "help", "resolve", "disputes"],
+    "bot_response": "Lok Adalats are alternative dispute resolution forums that settle cases quickly and amicably without long court processes. Their decisions are final and binding.",
+    "required_words": ["role", "Lok", "Adalats", "help", "resolve", "disputes"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["register", "property", "land", "legally"],
+    "bot_response": "Visit the local sub-registrar’s office with all original documents, identity proof, and pay the stamp duty and registration fees. The sale deed must be signed and witnessed.",
+    "required_words": ["register", "property", "land", "legally"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["legal", "rights", "woman", "Indian", "law"],
+    "bot_response": "Woman have rights against domestic violence, sexual harassment at workplace, dowry prohibition, equal pay, maternity benefits, and rights to property and inheritance.",
+    "required_words": ["legal", "rights", "woman"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["difference", "between", "civil", "criminal", "cases"],
+    "bot_response": " Civil cases deal with disputes like property, contracts, or family issues. Criminal cases involve offences against society like theft, murder, or assault, and are prosecuted by the State.",
+    "required_words": ["difference", "between", "civil", "criminal", "cases"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["use", "kitchen", "waste", "fertilizer", "my", "plants"],
+    "bot_response": "Yes! Organic kitchen waste like fruit peels, vegetable scraps, and coffee grounds can be composted and used as natural fertilizer.",
+    "required_words": ["kitchen", "waste", "fertilizer"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["common", "signs", "plant", "disease"],
+    "bot_response": "Spots on leaves, wilting, mold, discolored leaves, and stunted growth can be signs of disease or pests.",
+    "required_words": ["common", "signs", "plant", "disease"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["do", "receive", "legal", "notice"],
+    "bot_response": "Do not ignore it. Read it carefully, and consult a lawyer to draft a timely and appropriate reply. Not responding may lead to a court case against you.",
+    "required_words": ["receive", "legal", "notice"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["apply", "legal", "aid", "cannot", "afford", "lawyer"],
+    "bot_response": "You can apply through your District Legal Services Authority (DLSA) or online at nalsa.gov.in. Legal aid is free for women, children, SC/ST, senior citizens, and others in need.",
+    "required_words": ["apply", "legal", "aid"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["process", "get", "bail", "criminal", "case"],
+    "bot_response": " Apply for bail through a lawyer. For bailable offences, bail is a right. For non-bailable offences, the court decides based on the seriousness of the crime and other factors.",
+    "required_words": ["process", "bail", "criminal", "case"]
+  },
+  {
+    "response_type": "question",
+    "user_input": ["rights", "arrested", "person", "India"],
+    "bot_response": " Right to remain silent, right to know the charges, right to be presented before a magistrate within 24 hours, right to legal aid, and right to inform a relative or friend.",
+    "required_words": ["rights", "arrested", "person"]
+  },
+{
+  "response_type": "question",
+  "user_input": ["file", "RTI", "information", "government", "application"],
+  "bot_response": "You can file an RTI application to a Public Information Officer (PIO) of the concerned department. It can be filed online at https://rtionline.gov.in or in person.",
+  "required_words": ["file", "RTI"]
+},
+{
+  "response_type": "question",
+  "user_input": ["dowry", "harassment", "complaint", "498A", "file"],
+  "bot_response": "You can file a complaint under Section 498A IPC at the nearest police station  ",
+  "required_words": ["dowry", "complaint"]
+},
+{
+  "response_type": "question",
+  "user_input": ["tenant", "rights", "eviction", "rent", "agreement"],
+  "bot_response": "Tenants in India are protected from arbitrary eviction. Ensure you have a rental agreement and approach the Rent Control Board in case of disputes.",
+  "required_words": ["tenant", "rights"]
+},
+{
+  "response_type": "question",
+  "user_input": ["child", "custody", "divorce", "court", "joint"],
+  "bot_response": "Child custody is decided by the court in the best interest of the child. Either parent can apply, and joint custody is also possible.",
+  "required_words": ["child", "custody"]
+},
+{
+  "response_type": "question",
+  "user_input": ["cheque", "bounce", "legal", "action", "notice"],
+  "bot_response": "If a cheque bounces, send a legal notice within 30 days. If the payment is not made within 15 days, you can file a case under Section 138 of the Negotiable Instruments Act.",
+  "required_words": ["cheque", "bounce"]
+}
+
+  
+]

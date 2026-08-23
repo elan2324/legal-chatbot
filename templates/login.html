@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        font-size: 100%;
+        background: #d8a5bd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      *,
+      html {
+        --primaryGradient: linear-gradient(
+          93.12deg,
+          #581b98 0.52%,
+          #9c1de7 100%
+        );
+        --secondaryGradient: linear-gradient(
+          268.91deg,
+          #581b98 -2.14%,
+          #9c1de7 99.69%
+        );
+        --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+        --primary: #581b98;
+      }
+
+      .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--primaryGradient); /* Gradient background */
+        padding: 20px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 320px;
+        height: 350px;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: white;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        color: white;
+      }
+
+      input {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background: white;
+        border: none;
+        color: var(--primary);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: black; /* Only change the text color */
+        text-decoration: none; /* Optional: remove underlining */
+      }
+
+      p a {
+        color: white;
+      }
+
+      @media (max-width: 600px) {
+        .form-wrapper {
+          width: 55%;
+          padding: 10px;
+        }
+
+        input,
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <h1>Login</h1>
+      <form action="/signin" method="POST">
+        <div>
+          <label for="username">Username:</label>
+        </div>
+        <div>
+          <input type="text" id="username" name="username" required /><br />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+        </div>
+        <div>
+          <input type="password" id="password" name="password" required /><br />
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+        <div>
+          <p>Don't have an account? <a href="/register">Register here</a>.</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) window.location.reload();
+      });
+    </script>
+  </body>
+</html>

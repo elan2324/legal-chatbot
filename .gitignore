@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.coverage
+*.cover
+
+# Virtual environments
+venv/
+env/
+
+# Environment / secrets
+.env
+
+# Local databases and SQLite files
+*.db
+*.sqlite
+*.sqlite3
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
