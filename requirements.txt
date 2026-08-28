@@ -1,2 +1,9 @@
 Flask>=3.0,<4.0
 python-dotenv>=1.0,<2.0
+
+langchain
+langchain-community
+langchain-text-splitters
+chromadb
+sentence-transformers
+pypdf
